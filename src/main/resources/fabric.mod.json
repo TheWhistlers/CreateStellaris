@@ -1,30 +1,38 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "create_stellaris",
   "version": "${version}",
-  "name": "Example Mod",
+
+  "name": "Create: Stellaris",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "Me!"
   ],
   "contact": {
-    "sources": "https://github.com/Fabricators-of-Create/create-fabric-addon-template"
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
-  "license": "CC0",
-  "icon": "assets/modid/icon.png",
+
+  "license": "CC0-1.0",
+  "icon": "assets/create_stellaris/icon.png",
+
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.example.modid.ExampleMod"
+      "com.whistler.create_stellaris.CreateStellaris"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "create_stellaris.mixins.json"
   ],
+
   "depends": {
-    "fabricloader": ">=${fabric_loader_version}",
-    "fabric-api": ">=${fabric_api_version}",
-    "create": "${create_version}",
-    "minecraft": "${minecraft_version}"
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.18.2",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
   }
 }

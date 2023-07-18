@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "BDB",
+    "BAB",
+    " C "
+  ],
+  "key":
+  {
+    "A": {
+      "item": "minecraft:furnace"
+    },
+    "B": {
+      "item": "create:brass_sheet"
+    },
+    "C": {
+      "item": "create:large_cogwheel"
+    },
+    "D": {
+      "item": "create:brass_casing"
+    }
+  },
+  "result":{
+    "item": "create_stellaris:brass_engine",
+    "count": 1
+  }
+}
