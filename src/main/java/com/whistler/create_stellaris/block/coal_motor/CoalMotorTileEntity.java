@@ -73,9 +73,8 @@ public class CoalMotorTileEntity extends GeneratingKineticTileEntity implements 
     protected void work() {
         ItemStack source = input.getStackInSlot(0);
 
-        if(!working) {
-            if((source.is(Items.COAL) || source.is(Items.CHARCOAL))
-                    && !getBlockState().getValue(CoalMotorBlock.WORKING)) {
+        if (!working) {
+            if (source.is(Items.COAL) || source.is(Items.CHARCOAL)) {
                 working = true;
                 updateGeneratedRotation();
             }
@@ -92,7 +91,7 @@ public class CoalMotorTileEntity extends GeneratingKineticTileEntity implements 
                     timer = 0;
             }
 
-            if (source.isEmpty() || getBlockState().getValue(CoalMotorBlock.WORKING)) {
+            if (source.isEmpty()) {
                 working = false;
                 updateGeneratedRotation();
             }

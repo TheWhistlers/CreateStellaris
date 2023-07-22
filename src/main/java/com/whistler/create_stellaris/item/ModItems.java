@@ -13,5 +13,8 @@ public class ModItems {
     public static final ItemEntry<Item> BRASS_ENGINE =
             CreateStellaris.REGISTRATE.item("brass_engine", Item::new).register();
 
-    public static void register() { }
+	public static final ItemEntry<Item> CARBON_STEEL =
+			CreateStellaris.REGISTRATE.item("carbon_steel", Item::new).register();
+
+	public static void register() { }
 }

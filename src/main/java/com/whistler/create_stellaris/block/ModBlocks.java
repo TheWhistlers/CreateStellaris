@@ -6,6 +6,7 @@ import com.simibubi.create.foundation.data.SharedProperties;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.whistler.create_stellaris.CreateStellaris;
 import com.whistler.create_stellaris.block.coal_motor.CoalMotorBlock;
+import com.whistler.create_stellaris.block.shaft_furnace.ShaftFurnaceBlock;
 
 import static com.simibubi.create.foundation.data.ModelGen.customItemModel;
 
@@ -17,6 +18,14 @@ public class ModBlocks {
             .item()
             .transform(customItemModel())
             .register();
+
+	public static final BlockEntry<ShaftFurnaceBlock> SHAFT_FURNACE = CreateStellaris.REGISTRATE
+			.block("shaft_furnace", ShaftFurnaceBlock::new)
+			.initialProperties(SharedProperties::stone)
+			.tag(AllTags.AllBlockTags.SAFE_NBT.tag) //Dono what this tag means (contraption safe?).
+			.item()
+			.transform(customItemModel())
+			.register();
 
     public static void register() { }
 }

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "create_stellaris:block/coal_motor/coal_motor",
+      "x": 270, "y": 90
+    },
+    "facing=up": {
+      "model": "create_stellaris:block/coal_motor/coal_motor",
+      "x": 90, "y": 90
+    },
+    "facing=north": {
+      "model": "create_stellaris:block/coal_motor/coal_motor",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "create_stellaris:block/coal_motor/coal_motor",
+      "y": 0
+    },
+    "facing=west": {
+      "model": "create_stellaris:block/coal_motor/coal_motor",
+      "y": 90
+    },
+    "facing=east": {
+      "model": "create_stellaris:block/coal_motor/coal_motor",
+      "y": 270
+    }
+  }
+}

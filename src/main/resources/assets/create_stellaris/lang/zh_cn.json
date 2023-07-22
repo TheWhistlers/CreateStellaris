@@ -1,5 +1,6 @@
 {
   "itemGroup.create_stellaris:main":"机械动力: 群星众启",
   "item.create_stellaris.brass_engine": "黄铜引擎",
+  "item.create_stellaris.carbon_steel": "碳钢锭",
   "block.create_stellaris.coal_motor": "火力发动机"
 }

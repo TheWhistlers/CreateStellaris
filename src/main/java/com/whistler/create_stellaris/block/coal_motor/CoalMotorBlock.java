@@ -31,13 +31,11 @@ import org.jetbrains.annotations.NotNull;
 @SuppressWarnings({"deprecation"})
 public class CoalMotorBlock extends DirectionalKineticBlock implements ITE<CoalMotorTileEntity> {
     public static final VoxelShaper COAL_MOTOR_SHAPE =
-            CSShape.shape(0, 0, 12, 16, 16, 16)
-                    .add(2, 2, 4, 14, 14, 16).forDirectional();
+            CSShape.shape(3, 2, 3, 13, 15, 13)
+                    .add(0, 0, 0, 16, 5, 16).forDirectional();
 
-    public static final BooleanProperty WORKING = BooleanProperty.create("working");
     public CoalMotorBlock(Properties properties) {
         super(properties);
-        registerDefaultState(defaultBlockState().setValue(WORKING, false));
     }
 
     @Override
@@ -68,7 +66,6 @@ public class CoalMotorBlock extends DirectionalKineticBlock implements ITE<CoalM
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
-        builder.add(WORKING);
     }
 
     @Override
@@ -109,9 +106,5 @@ public class CoalMotorBlock extends DirectionalKineticBlock implements ITE<CoalM
     @Override
     public boolean hideStressImpact() {
         return true;
-    }
-
-    public void setWorking(Level world, BlockPos pos, boolean value) {
-        world.setBlock(pos, world.getBlockState(pos).setValue(WORKING, value), 3);
     }
 }
